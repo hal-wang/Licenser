@@ -1,8 +1,8 @@
-﻿using KeyGenerator.Services;
+﻿using Licenser.Services;
 using Microsoft.Extensions.Logging;
 using Microsoft.FluentUI.AspNetCore.Components;
 
-namespace KeyGenerator;
+namespace Licenser;
 
 public static class MauiProgram
 {

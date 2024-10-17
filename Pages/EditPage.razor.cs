@@ -1,12 +1,12 @@
 ﻿using H.Tools.Data;
-using KeyGenerator.Models;
-using KeyGenerator.Services;
+using Licenser.Models;
+using Licenser.Services;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace KeyGenerator.Pages;
+namespace Licenser.Pages;
 
 public partial class EditPage
 {

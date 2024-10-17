@@ -1,7 +1,7 @@
-﻿using KeyGenerator.Models;
+﻿using Licenser.Models;
 using SQLite;
 
-namespace KeyGenerator.Services;
+namespace Licenser.Services;
 
 public class DataSourceService : SQLiteConnection
 {

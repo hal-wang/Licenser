@@ -1,6 +1,6 @@
 ﻿using SQLite;
 
-namespace KeyGenerator.Models;
+namespace Licenser.Models;
 
 public class KeyApp
 {

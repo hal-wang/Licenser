@@ -1,8 +1,8 @@
-﻿using KeyGenerator.Models;
-using KeyGenerator.Services;
+﻿using Licenser.Models;
+using Licenser.Services;
 using System.Collections.ObjectModel;
 
-namespace KeyGenerator.Pages;
+namespace Licenser.Pages;
 
 public partial class Home
 {

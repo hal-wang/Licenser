@@ -1,4 +1,4 @@
-﻿namespace KeyGenerator;
+﻿namespace Licenser;
 
 public partial class App : Application
 {

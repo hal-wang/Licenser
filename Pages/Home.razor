@@ -1,6 +1,6 @@
 ﻿@page "/"
 
-@using KeyGenerator.Services
+@using Licenser.Services
 
 @inject IDialogService DialogService;
 @inject NavigationManager NavigationManager;
@@ -8,7 +8,7 @@
 
 <div class="h-full w-full flex flex-col bg-gray-100">
     <div class="flex items-center space-x-2 bg-primary text-white h-12 pl-6 text-lg font-bold">
-        <span class="flex-1 w-0">生成密钥</span>
+        <span class="flex-1 w-0">许可证管理</span>
         <div class="px-4 flex items-center" @onclick="(e) => OpenNew()">
             <FluentIcon Value="@(new Icons.Filled.Size28.Add())" Color="@Color.Lightweight" />
         </div>
