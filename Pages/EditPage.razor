@@ -1,0 +1,46 @@
+﻿@page "/edit/{id:int?}"
+
+@using KeyGenerator.Services
+
+@inject IDialogService DialogService;
+@inject NavigationManager NavigationManager;
+@inject DataSourceService DataSourceService;
+@inject IToastService ToastService;
+@inject IJSRuntime JSRuntime;
+
+<div class="h-full w-full flex flex-col bg-gray-100 space-y-2">
+    <div class="flex items-center space-x-2 bg-primary text-white h-12 text-lg font-bold">
+        <div class="px-4 flex items-center" @onclick="()=>GoBack()">
+            <FluentIcon Value="@(new Icons.Filled.Size28.ArrowLeft())" Color="@Color.Lightweight" />
+            <span class="pl-4">@(Id == null ? "新建应用" : "应用详情")</span>
+        </div>
+        <div class="flex-1 w-0"></div>
+        <div class="px-2 flex items-center" @onclick="()=>Delete()">
+            <FluentIcon Value="@(new Icons.Filled.Size28.Delete())" Color="@Color.Lightweight" />
+        </div>
+        <div class="pl-2 pr-4 flex items-center" @onclick="()=>Update()">
+            <FluentIcon Value="@(new Icons.Filled.Size28.Checkmark())" Color="@Color.Lightweight" />
+        </div>
+    </div>
+    <div class="flex flex-col px-4 py-4 bg-white">
+        <FluentTextField @bind-Value=EditApp.Name>名称</FluentTextField>
+        <div class="h-4"></div>
+        <FluentTextField @bind-Value=EditApp.Secret>密钥</FluentTextField>
+    </div>
+    <FluentDivider Class="w-full" Role="DividerRole.Presentation"></FluentDivider>
+    <div class="flex flex-col p-4 bg-white">
+        <FluentDatePicker Label="开始日期" @bind-Value="@_startTime" />
+        <div class="h-4"></div>
+        <FluentDatePicker Label="结束日期" @bind-Value="@_endTime" />
+        <div class="h-4"></div>
+        <FluentTextArea Label="Key" @bind-Value=_key />
+    </div>
+    <FluentDivider Class="w-full" Role="DividerRole.Presentation"></FluentDivider>
+    <div class="px-4">
+        <FluentButton OnClick="Generate" Appearance="Appearance.Accent" Class="w-full">生成</FluentButton>
+    </div>
+    <FluentDivider Class="w-full" Role="DividerRole.Presentation"></FluentDivider>
+    <div class="flex flex-col p-4 bg-white space-y-2">
+        <FluentTextArea ReadOnly @bind-Value=_license />
+    </div>
+</div>
